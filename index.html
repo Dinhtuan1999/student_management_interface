@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Harvard</title>
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css"> 
+</head>
+<body>
+  
+    <div id="wrapper">
+        <header>
+            <div class="inner-header container">
+                <a href="" id="logo"> Harvard </a>
+                <nav>
+                    <ul id="main-menu">
+                        <li><a href="">Trang chủ</a></li>
+                        <li><a href="list.html">List</a></li>
+                        <li><a href="add.html">Add</a></li>
+                       
+                    </ul>
+                </nav>
+            </div>
+        </header>
+
+        <div id="banner"> 
+            <img src="images/truong.jpg" style="width: 1278px;height: 100%;">
+        </div>
+
+        <br>
+        <div id="content" class="container">
+            <p>My name is Nguyen Thu Hoai. I’m 22 years old and I’m single. I live in Ho Chi Minh city and have just graduated from X university in August with the major in Accounting. I’ve got 3 months experience as an intern at A company. I like reading books and cooking. I’m a careful and hard-working person. I’m eager to learn new things and willing to work in team. I easily adapt to new working environment and take initiative in work.</p>
+            <p>I’m Mai Linh. I’m 28 years old and I’m single. I was born and grew up in Ha Noi, but I have been working in HCM City for 5 years. I graduated from the University of Economics and got 4 years of experience in Administration and Human Resource Management. I’m an active person who enjoy  working in the fields related to human beings. I’m rather serious and sensitive, so I can quickly catch up with the psychology of other people. I often read newspapers and listen to music in my free time.</p>
+            <p>My name’s Thu Ha. I’m turning 35 this year and have got married, I’m living in Hoan Kiem district. I have 10 years experience in the Marketing field and I’m a group leader of GMC company. I’m friendly and willing to help other people. Have to say, I enjoy and seem to be good at dealing with problems and challenging issues. I’m rather serious at work and can work under high pressure.</p>
+            <P>Hello, my name is Richard Walker, you can call me Richard. I’m 15 years old. I have a great passion for reading and listening to music. There are 3 people in my family. That means I don’t have any siblings, but I have liked a sister to play with me. It’s great meeting you. Hope we will have great time together.</P>
+            <p>Hello, I’m Richard Walker and I’m in the early 20s. I'm going to introduce myself. I’m in my last year in computer science in this technological university. As for my family, I’m the only child in my family. I’m interested in many things such as hi-tech equipment, and watching movies. My other hobbies including hanging  with my friends. I want to improve my English skills and I am glad to be here. It takes a long time to improve my English and hope that I’ll be able to meet these challenges and my English skill will be good.</p>
+
+
+        </div>
+    </div>
+
+<script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+
+<script>
+    $(document).ready(function(){
+        $(window).scroll(function() {
+            if ($(this).scrollTop()) {
+                $('header').addClass('sticky');
+            } else {
+                $('header').removeClass('sticky');
+            }
+        });
+    });
+</script>
+
+    
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+</body>
+</html>
