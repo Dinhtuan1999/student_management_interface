@@ -10,7 +10,7 @@
     <link rel="stylesheet" href="index.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     
-
+    
 </head>
 <body>
 
@@ -35,29 +35,25 @@
           <!-- /.card-header -->
           <div class="card-body ">
 
-    <form class="needs-validation" novalidate>
+    <form  id="formDemo" >
         <div class="form-row">
             <div class="col-md-12 mb-3">
               <label for="validationCustom01">Full Name</label>
-              <input type="text" class="form-control" id="validationCustom01" placeholder="Full Name" value="" required>
-              <div class="valid-feedback">
-              </div>
+              <input type="text" class="form-control" id="validationCustom01" placeholder="Full Name" name="name" value="" required="required"
+              oninvalid="InvalidMsg(this);" oninput="InvalidMsg(this);" pattern="^.{6,25}$" title="Vui lòng nhập đủ kí tự !">
             </div>           
               </div>
 
-        <div class="form-row">
-          
+        <div class="form-row">          
           <div class="col-md-1 mb-3">
             <label for="validationCustom02">Age</label>
-            <input type="number" class="form-control" id="validationCustom02" placeholder="Age" value="" required>
-            <div class="valid-feedback">            
-            </div>
+            <input type="text" class="form-control" id="validationCustom02" placeholder="Age" name="age" value="" required="required"
+            oninvalid="InvalidMsg(this);" oninput="InvalidMsg(this);" pattern="^.{2,15}$" title="Vui lòng nhập đủ kí tự !">           
           </div>
           <div class="col-md-4 mb-3">
             <label for="validationCustom01">Phone Number</label>
-            <input type="number" class="form-control" id="validationCustom01" placeholder="Phone Number" value="" required>
-            <div class="valid-feedback">
-            </div>
+            <input type="text" class="form-control" id="validationCustom01" placeholder="Phone Number" value="" name="phone" value="" required="required"
+            oninvalid="InvalidMsg(this);" oninput="InvalidMsg(this);" pattern="^.{6,15}$" title="Vui lòng nhập đủ kí tự !">            
           </div>
           <div class="col-md-7 mb-3">
             <label for="validationCustomUsername">Email</label>
@@ -65,9 +61,8 @@
               <div class="input-group-prepend">
                 <span class="input-group-text" id="inputGroupPrepend">@</span>
               </div>
-              <input type="email" class="form-control" id="validationCustomUsername" placeholder="Email" aria-describedby="inputGroupPrepend" required>
-              <div class="invalid-feedback">               
-              </div>
+              <input type="text" class="form-control" id="validationCustomUsername" placeholder="Email" aria-describedby="inputGroupPrepend" name="email" value="" required
+              oninvalid="InvalidMsg(this);" oninput="InvalidMsg(this);" pattern="^[a-z][a-z0-9_\.]{5,32}@[a-z0-9]{2,}(\.[a-z0-9]{2,4}){1,2}$" title="Vui lòng nhập đúng định dạng email !">              
             </div>
           </div>
         </div>
@@ -75,38 +70,43 @@
         <div class="form-row">
             <div class="col-md-12 mb-3">
               <label for="validationCustom01">Address</label>
-              <input type="text" class="form-control" id="validationCustom01" placeholder="Address" value="" required>
-              <div class="valid-feedback">
-              </div>
+              <input type="text" class="form-control" id="validationCustom01" placeholder="Address" value="" name="diachi" value="" required="required"
+              oninvalid="InvalidMsg(this);" oninput="InvalidMsg(this);" pattern="^.{6,15}$" title="Vui lòng nhập đủ kí tự !">
+              
             </div>           
               </div>
             
         <div class="form-row">
           <div class="col-md-3 mb-3">
             <label for="validationCustom03">Student ID</label>
-            <input type="number" class="form-control" id="validationCustom03" placeholder="Student ID" required>
-            <div class="invalid-feedback">
-            </div>
+            <input type="text" class="form-control" id="validationCustom03" placeholder="Student ID" name="id" value="" required="required"
+            oninvalid="InvalidMsg(this);" oninput="InvalidMsg(this);" pattern="^.{6,15}$" title="Vui lòng nhập đủ kí tự !">
+           
           </div>
           <div class="col-md-4 mb-3">
             <label for="validationCustom04">Class</label>
-            <input type="text" class="form-control" id="validationCustom04" placeholder="Class" required>
-            <div class="invalid-feedback">
-            </div>
+            <input type="text" class="form-control" id="validationCustom04" placeholder="Class" name="class" value="" required="required"
+            oninvalid="InvalidMsg(this);" oninput="InvalidMsg(this);" pattern="^.{2,15}$" title="Vui lòng nhập đủ kí tự !">
+           
           </div>
           <div class="col-md-5 mb-3">
             <label for="validationCustom05">Specialized</label>
-            <input type="text" class="form-control" id="validationCustom05" placeholder="Specialized" required>
+            <input type="text" class="form-control" id="validationCustom05" placeholder="Specialized" name="khoa" value="" required="required"
+            oninvalid="InvalidMsg(this);" oninput="InvalidMsg(this);" pattern="^.{4,15}$" title="Vui lòng nhập đủ kí tự !">
             
           </div>
         </div>
-        <div>
-            <label for="cars">Gender : </label> <br>
+         <div>
+            <label for="cars" >Gender : </label> <br>
 
-            <input name="gioitinh" type="radio" value="Nam" />Nam <br>
-            <input name="gioitinh" type="radio" value="Nữ" />Nữ <br>
-            <input name="gioitinh" type="radio" value="Khác" />Khác       
-          </div>
+          <select id="gioitinh" name="Gender" required="required" oninvalid="InvalidMsg(this);" oninput="InvalidMsg(this);">
+            <option value="">Gender</option>
+            <option value="nam">nam</option>
+            <option value="nữ">Nữ</option>
+            <option value="khác">Khác</option>
+          </select> 
+          </div> 
+         
           <br>
           <div>
             <button class="btn btn-primary" type="submit">ADD</button>
@@ -114,15 +114,13 @@
         </div>
         
       </form>   
+
     </div>
 </div>
-
-
-      
-
-
-
-
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/jquery-validation@1.19.3/dist/jquery.validate.min.js"></script>
+<script type="text/javascript"  src="index.js"></script>
+ 
 <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
